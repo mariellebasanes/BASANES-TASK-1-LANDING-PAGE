@@ -25,6 +25,38 @@
 		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
+		<!--begin::Custom Hover Effects-->
+		<style>
+			.card-hover-effect {
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			.card-hover-effect:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+			}
+			.step-box-hover {
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			.step-box-hover:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12) !important;
+			}
+			.service-card-hover {
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			.service-card-hover:hover {
+				transform: translateY(-6px);
+				box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+			}
+			.testimonial-card-hover {
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			.testimonial-card-hover:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+			}
+		</style>
+		<!--end::Custom Hover Effects-->
 		<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
 	</head>
 	<!--end::Head-->
@@ -39,7 +71,7 @@
             <div class="row justify-content-center">
                 <div class="col-xxl-12 col-xl-11">
                     <!--begin::Hero Card-->
-                    <div class="card shadow-sm rounded-4 border-0">
+                    <div class="card shadow-sm rounded-4 border-0 card-hover-effect" style="border: 2px solid #D32F2F !important;">
                         <div class="card-body p-8 p-lg-12">
                             <div class="row align-items-center g-5">
                                 <!--begin::Left Section - Text Content-->
@@ -92,7 +124,7 @@
             <div class="row justify-content-center">
                 <div class="col-xxl-12 col-xl-11">
                     <!--begin::Services Card-->
-                    <div class="card shadow-sm rounded-4 border-0">
+                    <div class="card shadow-sm rounded-4 border-0 card-hover-effect" style="border: 2px solid #D32F2F !important;">
                         <div class="card-body p-8 p-lg-12">
                             <!--begin::Services Header-->
                             <div class="text-center mb-10 mb-lg-15">
@@ -108,7 +140,7 @@
                                 
                                 <!--begin::Subtext-->
                                 <p class="fs-5 text-gray-700">
-                                    If you need more info, please check out the <a href="#" class="text-primary text-decoration-underline">Guidance and Counseling Office</a> page.
+                                    If you need more info, please check out the <a href="#" class="text-gray-700 text-decoration-underline">Guidance and Counseling Office</a> page.
                                 </p>
                                 <!--end::Subtext-->
                             </div>
@@ -118,18 +150,13 @@
         <div class="row g-5 g-xl-8">
                         <!--begin::Service Card 1 - Interview-->
                         <div class="col-xl-6">
-                            <div class="card shadow-sm rounded-4 border-0 h-100 transition-all" style="transition: transform 0.2s ease-in-out;">
+                            <div class="card shadow-sm rounded-4 border-0 h-100 service-card-hover" style="border: 2px solid #D4A574 !important;">
                                 <div class="card-body p-8">
                                     <div class="d-flex align-items-start mb-6">
                                         <!--begin::Icon-->
                                         <div class="flex-shrink-0 me-6">
                                             <div class="rounded-3 p-4" style="background-color: #F5E6D3; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
-                                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M24 8C16.27 8 10 14.27 10 22C10 29.73 16.27 36 24 36C31.73 36 38 29.73 38 22C38 14.27 31.73 8 24 8ZM24 32C18.48 32 14 27.52 14 22C14 16.48 18.48 12 24 12C29.52 12 34 16.48 34 22C34 27.52 29.52 32 24 32Z" fill="#8B4513" opacity="0.7"/>
-                                                    <path d="M16 20C16 20.55 16.45 21 17 21H19C19.55 21 20 20.55 20 20C20 19.45 19.55 19 19 19H17C16.45 19 16 19.45 16 20Z" fill="#8B4513"/>
-                                                    <path d="M28 20C28 20.55 28.45 21 29 21H31C31.55 21 32 20.55 32 20C32 19.45 31.55 19 31 19H29C28.45 19 28 19.45 28 20Z" fill="#8B4513"/>
-                                                    <path d="M20 26C20 27.1 20.9 28 22 28H26C27.1 28 28 27.1 28 26C28 24.9 27.1 24 26 24H22C20.9 24 20 24.9 20 26Z" fill="#8B4513"/>
-                                                </svg>
+                                                <img src="assets/media/services avatars/interview.png" alt="Interview" class="img-fluid" style="max-width: 48px; max-height: 48px; object-fit: contain;">
                                             </div>
                                         </div>
                                         <!--end::Icon-->
@@ -154,17 +181,13 @@
                         
                         <!--begin::Service Card 2 - Psychological Test Administration-->
                         <div class="col-xl-6">
-                            <div class="card shadow-sm rounded-4 border-0 h-100 transition-all" style="transition: transform 0.2s ease-in-out;">
+                            <div class="card shadow-sm rounded-4 border-0 h-100 service-card-hover" style="border: 2px solid #81C784 !important;">
                                 <div class="card-body p-8">
                                     <div class="d-flex align-items-start mb-6">
                                         <!--begin::Icon-->
                                         <div class="flex-shrink-0 me-6">
                                             <div class="rounded-3 p-4" style="background-color: #D4EDDA; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
-                                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="12" y="8" width="24" height="32" rx="2" stroke="#28A745" stroke-width="2" fill="none"/>
-                                                    <path d="M18 18H30M18 24H30M18 30H24" stroke="#28A745" stroke-width="2" stroke-linecap="round"/>
-                                                    <path d="M20 14L22 16L26 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
+                                                <img src="assets/media/services avatars/psychological test.png" alt="Psychological Test Administration" class="img-fluid" style="max-width: 48px; max-height: 48px; object-fit: contain;">
                                             </div>
                                         </div>
                                         <!--end::Icon-->
@@ -189,18 +212,13 @@
                         
                         <!--begin::Service Card 3 - Consultation-->
                         <div class="col-xl-6">
-                            <div class="card shadow-sm rounded-4 border-0 h-100 transition-all" style="transition: transform 0.2s ease-in-out;">
+                            <div class="card shadow-sm rounded-4 border-0 h-100 service-card-hover" style="border: 2px solid #BA68C8 !important;">
                                 <div class="card-body p-8">
                                     <div class="d-flex align-items-start mb-6">
                                         <!--begin::Icon-->
                                         <div class="flex-shrink-0 me-6">
                                             <div class="rounded-3 p-4" style="background-color: #E6D9F5; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
-                                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="18" cy="18" r="8" stroke="#9C27B0" stroke-width="2" fill="none"/>
-                                                    <circle cx="30" cy="18" r="8" stroke="#9C27B0" stroke-width="2" fill="none"/>
-                                                    <path d="M18 26C18 30.42 21.58 34 26 34H30" stroke="#9C27B0" stroke-width="2" stroke-linecap="round"/>
-                                                    <path d="M26 30L30 34L26 38" stroke="#9C27B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
+                                                <img src="assets/media/services avatars/consultation.png" alt="Consultation" class="img-fluid" style="max-width: 48px; max-height: 48px; object-fit: contain;">
                                             </div>
                                         </div>
                                         <!--end::Icon-->
@@ -225,18 +243,13 @@
                         
                         <!--begin::Service Card 4 - Counseling-->
                         <div class="col-xl-6">
-                            <div class="card shadow-sm rounded-4 border-0 h-100 transition-all" style="transition: transform 0.2s ease-in-out;">
+                            <div class="card shadow-sm rounded-4 border-0 h-100 service-card-hover" style="border: 2px solid #4DB6AC !important;">
                                 <div class="card-body p-8">
                                     <div class="d-flex align-items-start mb-6">
                                         <!--begin::Icon-->
                                         <div class="flex-shrink-0 me-6">
                                             <div class="rounded-3 p-4" style="background-color: #D1ECF1; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
-                                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="24" cy="20" r="8" stroke="#17A2B8" stroke-width="2" fill="none"/>
-                                                    <path d="M16 32C16 28.69 19.58 26 24 26C28.42 26 32 28.69 32 32" stroke="#17A2B8" stroke-width="2" stroke-linecap="round"/>
-                                                    <path d="M28 14L30 12L34 16L32 18L28 14Z" stroke="#17A2B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <circle cx="30" cy="14" r="2" fill="#17A2B8"/>
-                                                </svg>
+                                                <img src="assets/media/services avatars/counseling.png" alt="Counseling" class="img-fluid" style="max-width: 48px; max-height: 48px; object-fit: contain;">
                                             </div>
                                         </div>
                                         <!--end::Icon-->
@@ -275,7 +288,7 @@
             <div class="row justify-content-center">
                 <div class="col-xxl-12 col-xl-11">
                     <!--begin::How It Works Card-->
-                    <div class="card shadow-sm rounded-4 border-0">
+                    <div class="card shadow-sm rounded-4 border-0 card-hover-effect" style="border: 2px solid #D32F2F !important;">
                         <div class="card-body p-8 p-lg-12">
                             <!--begin::Header-->
                             <div class="text-center mb-15 mb-lg-20">
@@ -291,7 +304,7 @@
                             <div class="row gy-5 gy-lg-4">
                                 <!--begin::Step 1-->
                                 <div class="col-12 col-lg">
-                                    <div class="rounded-4 p-6 p-lg-8 h-100 text-center" style="background-color: #F7E3C8;">
+                                    <div class="rounded-4 p-6 p-lg-8 h-100 text-center step-box-hover" style="background-color: #F7E3C8; border: 2px solid #D4A574;">
                                         <div class="d-flex flex-column align-items-center">
                                             <div class="mb-4">
                                                 <div class="rounded-3 p-4 d-flex align-items-center justify-content-center" style="background-color: #F5D9AE; width: 72px; height: 72px;">
@@ -310,7 +323,7 @@
 
                                 <!--begin::Step 2-->
                                 <div class="col-12 col-lg">
-                                    <div class="rounded-4 p-6 p-lg-8 h-100 text-center" style="background-color: #BFEBC7;">
+                                    <div class="rounded-4 p-6 p-lg-8 h-100 text-center step-box-hover" style="background-color: #BFEBC7; border: 2px solid #66BB6A;">
                                         <div class="d-flex flex-column align-items-center">
                                             <div class="mb-4">
                                                 <div class="rounded-3 p-4 d-flex align-items-center justify-content-center" style="background-color: #A9E3B4; width: 72px; height: 72px;">
@@ -329,7 +342,7 @@
 
                                 <!--begin::Step 3-->
                                 <div class="col-12 col-lg">
-                                    <div class="rounded-4 p-6 p-lg-8 h-100 text-center" style="background-color: #F0D6EC;">
+                                    <div class="rounded-4 p-6 p-lg-8 h-100 text-center step-box-hover" style="background-color: #F0D6EC; border: 2px solid #BA68C8;">
                                         <div class="d-flex flex-column align-items-center">
                                             <div class="mb-4">
                                                 <div class="rounded-3 p-4 d-flex align-items-center justify-content-center" style="background-color: #E8C8E4; width: 72px; height: 72px;">
@@ -348,7 +361,7 @@
 
                                 <!--begin::Step 4-->
                                 <div class="col-12 col-lg">
-                                    <div class="rounded-4 p-6 p-lg-8 h-100 text-center" style="background-color: #FFE4D9;">
+                                    <div class="rounded-4 p-6 p-lg-8 h-100 text-center step-box-hover" style="background-color: #FFE4D9; border: 2px solid #EF5350;">
                                         <div class="d-flex flex-column align-items-center">
                                             <div class="mb-4">
                                                 <div class="rounded-3 p-4 d-flex align-items-center justify-content-center" style="background-color: #FFD0BD; width: 72px; height: 72px;">
@@ -367,7 +380,7 @@
 
                                 <!--begin::Step 5-->
                                 <div class="col-12 col-lg">
-                                    <div class="rounded-4 p-6 p-lg-8 h-100 text-center" style="background-color: #D7ECFF;">
+                                    <div class="rounded-4 p-6 p-lg-8 h-100 text-center step-box-hover" style="background-color: #D7ECFF; border: 2px solid #42A5F5;">
                                         <div class="d-flex flex-column align-items-center">
                                             <div class="mb-4">
                                                 <div class="rounded-3 p-4 d-flex align-items-center justify-content-center" style="background-color: #C3E2FF; width: 72px; height: 72px;">
@@ -399,7 +412,7 @@
             <div class="row justify-content-center">
                 <div class="col-xxl-12 col-xl-11">
                     <!--begin::Testimonials Card-->
-                    <div class="card shadow-sm rounded-4 border-0">
+                    <div class="card shadow-sm rounded-4 border-0 card-hover-effect" style="border: 2px solid #D32F2F !important;">
                         <div class="card-body p-8 p-lg-12">
                             <!--begin::Header-->
                             <div class="text-center mb-15 mb-lg-20">
@@ -415,7 +428,7 @@
                             <div class="row g-5">
                         <!--begin::Testimonial Card 1-->
                         <div class="col-lg-4 col-md-6">
-                            <div class="card shadow-sm rounded-4 border-0 h-100">
+                            <div class="card shadow-sm rounded-4 border-0 h-100 testimonial-card-hover" style="border: 2px solid #E0E0E0 !important;">
                                 <div class="card-body p-8">
                                     <!--begin::Header-->
                                     <div class="d-flex align-items-start justify-content-between mb-6">
@@ -455,7 +468,7 @@
                         
                         <!--begin::Testimonial Card 2-->
                         <div class="col-lg-4 col-md-6">
-                            <div class="card shadow-sm rounded-4 border-0 h-100">
+                            <div class="card shadow-sm rounded-4 border-0 h-100 testimonial-card-hover" style="border: 2px solid #E0E0E0 !important;">
                                 <div class="card-body p-8">
                                     <!--begin::Header-->
                                     <div class="d-flex align-items-start justify-content-between mb-6">
@@ -495,7 +508,7 @@
                         
                         <!--begin::Testimonial Card 3-->
                         <div class="col-lg-4 col-md-6">
-                            <div class="card shadow-sm rounded-4 border-0 h-100">
+                            <div class="card shadow-sm rounded-4 border-0 h-100 testimonial-card-hover" style="border: 2px solid #E0E0E0 !important;">
                                 <div class="card-body p-8">
                                     <!--begin::Header-->
                                     <div class="d-flex align-items-start justify-content-between mb-6">
